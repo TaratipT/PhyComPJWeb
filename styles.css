@@ -8,10 +8,27 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #f0f2f5, #e1e5ec);
+}
+
+/* ชื่อ Peter Parkdui นอกกรอบ */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    pointer-events: pointer; /* ปิดการคลิก */
+    cursor: default; /* เปลี่ยนเคอร์เซอร์ให้เป็นค่าเริ่มต้น */
+}
+
+/* เอฟเฟกต์ Hover */
+h1:hover {
+    color: #4caf50;
+    transform: scale(1.1);
 }
 
 /* กล่องแสดงข้อมูล MQTT */
@@ -24,12 +41,6 @@ body {
     max-width: 700px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-in-out;
-}
-
-h1 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
 }
 
 p {
