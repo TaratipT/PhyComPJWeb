@@ -1,0 +1,82 @@
+/* การตั้งค่าพื้นฐานของเว็บไซต์ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+/* กล่องแสดงข้อมูล MQTT */
+#data-display {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* รายการแสดงข้อมูล MQTT */
+#mqtt-data-list {
+    margin-top: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* สไตล์สำหรับข้อมูลที่แสดง */
+.data-item {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-item.in {
+    background-color: #4caf50; /* สีเขียวอ่อนสำหรับ IN */
+    color: #e9f5ee;
+}
+
+.data-item.out {
+    background-color: #f44336; /* สีแดงอ่อนสำหรับ OUT */
+    color: #fceaea;
+}
+
+/* ปรับแต่ง scrollbar */
+#mqtt-data-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#mqtt-data-list::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 4px;
+}
+
+#mqtt-data-list::-webkit-scrollbar-thumb:hover {
+    background-color: #bbbbbb;
+}
