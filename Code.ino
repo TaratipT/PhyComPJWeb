@@ -1,27 +1,28 @@
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
 #include <Servo.h>
 #include <WiFi.h>
-#include <PubSubClient.h> // Include the PubSubClient library
+#include <PubSubClient.h>
 
+#include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 Servo myservo;
 
+int Slot = 4;           // Total number of parking Slots
+
 int IR1 = 2;
 int IR2 = 3;
-int Slot = 4;           // Total number of parking Slots
 int flag1 = 0;
 int flag2 = 0;
 
 // WiFi settings
-const char* ssid = "Red Magic 5G";      // Your WiFi SSID
-const char* password = "nijitpong780";  // Your WiFi password
+const char* ssid = "TOTfttx_98/140_2.4G";
+const char* password = "0813630897";
 
 // MQTT settings
-const char* mqtt_server = "mqtt-dashboard.com"; // Replace with your MQTT broker IP
-const char* mqtt_topic = "peter/parkdui";        // Your MQTT topic
-const int mqtt_port = 1883;                     // Your MQTT server port
+const char* mqtt_server = "mqtt-dashboard.com";
+const char* mqtt_topic = "peter/parkdui";
+const int mqtt_port = 8884;                    
 
 WiFiClient espClient;
 PubSubClient client(espClient);
